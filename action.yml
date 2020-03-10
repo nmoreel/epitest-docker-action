@@ -1,0 +1,12 @@
+name: 'Epitest-docker'
+description: 'Epitech docker launcher'
+
+runs:
+  using: 'docker'
+  image: 'docker://epitechcontent/subject_template'
+  entrypoint: bash
+  args:
+    - '-v'
+    - '$PWD:/usr/local/bugs'
+    - '-c'
+    - 'cd /usr/local/bugs && make'
